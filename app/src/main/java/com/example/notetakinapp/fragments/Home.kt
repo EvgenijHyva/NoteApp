@@ -1,7 +1,6 @@
 package com.example.notetakinapp.fragments
 
 import android.os.Bundle
-import android.provider.ContactsContract.CommonDataKinds.Note
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.Menu
@@ -15,6 +14,7 @@ import com.example.notetakinapp.MainActivity
 import com.example.notetakinapp.R
 import com.example.notetakinapp.adapter.NoteAdapter
 import com.example.notetakinapp.databinding.FragmentHomeBinding
+import com.example.notetakinapp.model.Note
 import com.example.notetakinapp.viewModel.NoteViewModel
 
 class Home : Fragment(R.layout.fragment_home), SearchView.OnQueryTextListener {

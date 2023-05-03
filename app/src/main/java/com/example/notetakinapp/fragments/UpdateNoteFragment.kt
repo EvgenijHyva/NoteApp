@@ -73,7 +73,7 @@ class UpdateNoteFragment : Fragment(R.layout.fragment_update_note) {
             setPositiveButton("Delete") {
                 _,
                 _-> notesViewModel.deleteNote(currentNote)
-                view?.findNavController().navigate(
+                view?.findNavController()?.navigate(
                     R.id.action_updateNoteFragment_to_homeFragment
                 )
             }

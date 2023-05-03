@@ -18,7 +18,7 @@ import com.example.notetakinapp.databinding.FragmentNewNoteBinding
 import com.example.notetakinapp.viewModel.NoteViewModel
 import com.example.notetakinapp.model.Note
 
-class NewNoteFragment : Fragment(R.layout.fragment_new_note),  {
+class NewNoteFragment : Fragment(R.layout.fragment_new_note) {
     private var _binding: FragmentNewNoteBinding? = null
     private val binding get() = _binding!!
     private lateinit var notesViewModel: NoteViewModel
