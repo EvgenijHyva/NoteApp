@@ -71,12 +71,14 @@ class Home : Fragment(R.layout.fragment_home), SearchView.OnQueryTextListener {
         }
     }
     private fun updateUI(note: List<Note>?) {
-        if (note.isNotEmpty()) {
-            binding.cardView.visibility = View.GONE
-            binding.recyclerView.visibility = View.VISIBLE
-        } else {
-            binding.cardView.visibility = View.VISIBLE
-            binding.recyclerView.visibility = View.GONE
+        if (note != null) {
+            if (note.isNotEmpty()) {
+                binding.cardView.visibility = View.GONE
+                binding.recyclerView.visibility = View.VISIBLE
+            } else {
+                binding.cardView.visibility = View.VISIBLE
+                binding.recyclerView.visibility = View.GONE
+            }
         }
     }
 
@@ -106,9 +108,7 @@ class Home : Fragment(R.layout.fragment_home), SearchView.OnQueryTextListener {
         val searchQuery = "%$query"
         notesViewModel.searchNote(searchQuery).observe(
             this,
-            {
-                list -> noteAdapter.differ.submitList(list)
-            }
+            { list -> noteAdapter.differ.submitList(list) }
         )
     }
 

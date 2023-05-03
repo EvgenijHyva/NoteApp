@@ -13,7 +13,7 @@ import com.example.notetakinapp.model.Note
 import java.util.*
 
 class NoteAdapter : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
-    class NoteViewHolder(private val itemBinding: NoteItemBinding):
+    class NoteViewHolder(val itemBinding: NoteItemBinding):
         RecyclerView.ViewHolder(itemBinding.root) // layout: note_item.xml
 
     private val differCallback = object : DiffUtil.ItemCallback<Note>() {
