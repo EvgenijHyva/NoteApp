@@ -13,5 +13,5 @@ class NoteRepository(
     suspend fun updateNote(note: Note) = noteDB.updateNote(note)
 
     fun getAllNotes() = noteDB.getAllNotes()
-    fun seachNote(query: String) = noteDB.searchNote(query)
+    fun searchNote(query: String?) = noteDB.searchNote(query)
 }
