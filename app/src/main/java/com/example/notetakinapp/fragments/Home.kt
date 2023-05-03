@@ -27,7 +27,7 @@ class Home : Fragment(R.layout.fragment_home), SearchView.OnQueryTextListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // setHasOptionsMenu(true) // deprecated
+        setHasOptionsMenu(true) // deprecated
     }
 
     override fun onCreateView(
