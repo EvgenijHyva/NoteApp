@@ -11,7 +11,7 @@
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_home2_to_newNoteFragment"
+            android:id="@+id/action_homeFragment_to_newNoteFragment"
             app:destination="@id/newNoteFragment" />
         <action
             android:id="@+id/action_homeFragment_to_updateNoteFragment"
